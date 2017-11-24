@@ -1,6 +1,6 @@
 import json
-inputfile = '/Users/mbp/Python/OnFire/OnFire/basedata/News300.txt'
-outputfile = '/Users/mbp/Python/OnFire/OnFire/basedata/News.json'
+inputfile = 'basedata/News300.txt'
+outputfile = 'basedata/News300.json'
 fin = open(inputfile,encoding='utf8')
 fout = open(outputfile,encoding='utf8',mode='w')
 
