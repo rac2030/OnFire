@@ -6,8 +6,10 @@ import watson_developer_cloud.natural_language_understanding.features.v1 as Feat
 from watson_developer_cloud.natural_language_understanding_v1 import Features, EntitiesOptions, KeywordsOptions, \
     CategoriesOptions, ConceptsOptions, RelationsOptions
 
-inputurl = "https://hackathon17.mope.ml/HackathonSite/News300.txt"
-outputfile = 'News300Enhanced.json'
+#inputurl = "https://hackathon17.mope.ml/HackathonSite/AccuracyTestNews300.txt"
+#outputfile = 'AccuracyTestNews300.json'
+inputurl = "https://hackathon17.mope.ml/HackathonSite/NewsAll.txt"
+outputfile = 'NewsAllEnhanced.json'
 
 news300 = urllib.request.urlopen(inputurl)
 news300Bytes = news300.read()
