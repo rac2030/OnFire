@@ -1,6 +1,6 @@
 import json
-inputfile = 'basedata/News300.txt'
-outputfile = 'basedata/News300.json'
+inputfile = 'basedata/News300.new.txt'
+outputfile = 'basedata/News300.new.json'
 fin = open(inputfile,encoding='utf8')
 fout = open(outputfile,encoding='utf8',mode='w')
 
@@ -30,5 +30,5 @@ for rawNewsRecord in rawNewsRecords:
 data = {}
 data['data']=records
 
-fout.write(json.dumps(data))
+fout.write(json.dumps(data, indent=2))
 fout.close()
