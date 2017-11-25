@@ -21,7 +21,7 @@ fout = open("new300.csv",encoding='utf8',mode='w')
 
 with open('T0.CSV') as f:
     for line in f:
-        newline = ''
+        newline = '@'
         if line.startswith(';;;;;;'):
             n6 = find_between(line, ";;;;;;", ";")
             newline = n0 + delimeter + n1 + delimeter + n2 + delimeter + n3 + delimeter +  n4 + delimeter + n5 + delimeter + n6
@@ -46,5 +46,6 @@ with open('T0.CSV') as f:
             n1 = find_between(line, ";", ";;;;;;")
             newline = n0 + delimeter + n1
             print(newline)
-        fout.write(newline + '\n')
+        if  not newline.startswith('@'):
+            fout.write(newline + '\n')
 fout.close()
