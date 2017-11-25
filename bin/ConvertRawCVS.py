@@ -1,6 +1,5 @@
-import  os
 
-n0 = 'Reuters News Topics'
+n0 = ''
 n1 = ''
 n2 = ''
 n3 = ''
@@ -46,6 +45,9 @@ with open('T0.CSV') as f:
             n1 = find_between(line, ";", ";;;;;;")
             newline = n0 + delimeter + n1
             print(newline)
+        else:
+            n0 = find_between(line, "", ";;;;;;;")
+            newline = n0
         if  not newline.startswith('@'):
             fout.write(newline + '\n')
 fout.close()
